@@ -1,0 +1,156 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+body {
+  overflow: unset;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  user-select: none;
+}
+
+.games-main {
+  display: flex;
+  background-color: $mainPageBackground;
+  color: white;
+  min-height: 100vh;
+  .aside-left {
+    width: 25%;
+    padding: 10px 15px;
+    background-color: $sidebarBackground;
+    position: sticky;
+    top: 0;
+    @include breakPoints(allMobile) {
+      display: none;
+    }
+    .head {
+      padding: 0 10px;
+      margin-bottom: 20px;
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        h3 {
+          color: white;
+          font-size: 26px;
+        }
+        .icon {
+          @include iconBackground;
+          svg {
+            color: white;
+          }
+        }
+      }
+      .input {
+        position: relative;
+        input {
+          width: 100%;
+          padding: 10px;
+          text-indent: 25px;
+          outline: none;
+          border-radius: 30px;
+          border: none;
+          background-color: $liHoverAInputColor;
+          color: white;
+          &::placeholder {
+            color: $placeholderColor;
+          }
+        }
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+        transition: $trans;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+        &:hover {
+          background-color: $liHoverAInputColor;
+        }
+        .icon {
+          @include iconBackground;
+          transition: $trans;
+          margin-right: 10px;
+          i {
+            filter: invert(80%);
+          }
+        }
+        p {
+          flex: 1;
+        }
+        svg {
+          color: $colorWhite;
+        }
+        &.active {
+          background-color: $liHoverAInputColor;
+          .icon {
+            background-color: $iconActive;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    flex: 1;
+    padding: 15px 30px;
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      h2 {
+        font-size: 22.5px;
+      }
+      p {
+        color: $blueColor;
+        cursor: pointer;
+      }
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      column-gap: 20px;
+      row-gap: 50px;
+      .card {
+        cursor: pointer;
+        transition: $trans;
+        border-radius: 10px;
+        &:hover {
+          background-color: $liHoverAInputColor;
+        }
+        img {
+          width: 100%;
+          height: 200px;
+          border-radius: 10px;
+          object-fit: cover;
+        }
+        .text {
+          padding: 10px;
+          p {
+            margin: 10px 0;
+          }
+          span {
+            color: $colorWhite;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}

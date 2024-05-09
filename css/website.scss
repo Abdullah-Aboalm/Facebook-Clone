@@ -1,0 +1,20 @@
+// import globalRules
+@use "./sass/helpers/globalRules";
+
+// import header
+@use "./sass/layout/header";
+
+// import home page
+@use "./sass/pages/homePage";
+
+// import video page
+@use "./sass/pages/videoPage";
+
+// import market page
+@use "./sass/pages/marketPage";
+
+// import groups page
+@use "./sass/pages/groupsPage";
+
+// import groups page
+@use "./sass/pages/gamesPage";

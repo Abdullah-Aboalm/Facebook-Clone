@@ -1,0 +1,45 @@
+* {
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "cairo", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container .form-cont .form input {
+  direction: ltr;
+  text-align: right;
+}
+.container .form-cont .form a {
+  direction: rtl;
+}
+.container .text {
+  text-align: right;
+}
+
+.footer ul {
+  direction: rtl;
+}
+.footer ul li {
+  margin-right: 20px;
+}
+.footer p.copyright {
+  direction: rtl;
+}

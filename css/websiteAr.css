@@ -1,0 +1,395 @@
+.nav .input-logo .input svg,
+.nav ul.profile .input svg {
+  right: 15px;
+  left: unset;
+}
+.nav .input-logo .arrow {
+  margin-left: 10px;
+  margin-right: unset;
+}
+.nav .input-logo svg.fa-facebook {
+  margin-left: 10px;
+  margin-right: unset;
+}
+.nav ul.profile li.main:not(:last-child) {
+  margin-left: 15px;
+  margin-right: unset;
+}
+.nav ul.profile .notif-popup ul .text,
+.nav ul.profile .messenger-popup ul .text,
+.nav ul.profile .menu-popup ul .text,
+.nav ul.profile .profile-popup ul .text {
+  margin-right: 10px;
+  margin-left: unset;
+}
+.nav .notif-popup .buttons button,
+.nav .messenger-popup .buttons button {
+  margin-left: 10px;
+  margin-right: unset;
+}
+.nav .notif-popup ul .img,
+.nav .messenger-popup ul .img {
+  margin-left: 5px;
+  margin-right: unset;
+}
+.nav .notif-popup ul span.circle,
+.nav .messenger-popup ul span.circle {
+  margin-right: 10px;
+  margin-left: unset;
+}
+.nav .messenger-popup .head .icon {
+  margin-right: 10px;
+  margin-left: unset;
+}
+.nav .notif-popup ul.noti span {
+  margin-right: 10px;
+  margin-left: unset;
+}
+.nav .notif-popup .img img.i {
+  left: -5px;
+  right: unset;
+}
+.nav .notif-popup .img i {
+  left: -5px;
+  right: unset;
+}
+.nav .menu-popup .create ul li {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.nav .menu-popup .create ul li .icon {
+  margin-right: unset;
+  margin-left: 10px;
+}
+.nav .profile-popup ul:first-of-type li img {
+  margin-right: unset;
+  margin-left: 10px;
+}
+.nav .profile-popup .icon {
+  margin-right: unset;
+  margin-left: 10px;
+}
+.nav .search-pop {
+  left: unset;
+  right: 0;
+}
+.nav .search-pop ul.ul-search {
+  width: 100%;
+}
+.nav .search-pop ul.ul-search li .text {
+  margin-left: unset;
+  margin-right: 10px;
+}
+.nav .search-pop ul.ul-search li .text span {
+  margin-right: unset;
+  margin-left: 5px;
+}
+
+.nav ul.profile .profile-popup .icon {
+  margin-left: 10px;
+}
+
+.nav ul.profile .messenger-popup ul.persons li .text p {
+  color: gray;
+  margin-top: 8px;
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav ul.profile .messenger-popup ul.persons li .text.new p {
+  color: #3878de;
+}
+
+.main .float {
+  left: 20px;
+  left: unset;
+}
+.main .notification-float {
+  left: unset;
+  right: 20px;
+}
+.main .notification-float ul li .text {
+  margin-left: unset;
+  margin-right: 10px;
+}
+.main .notification-float ul li span {
+  margin-left: unset;
+  margin-right: 10px;
+}
+.main .notification-float .img {
+  margin-right: unset;
+  margin-left: 5px;
+}
+.main .notification-float .img i {
+  right: unset;
+  left: -5px;
+}
+.main .aside-right ul.birthdays li i {
+  margin-right: unset;
+  margin-left: 10px;
+}
+.main .aside-right .contacts-head svg {
+  margin-left: unset;
+  margin-right: 5px;
+}
+.main .aside-right ul.contacts li .img {
+  margin-right: unset;
+  margin-left: 13px;
+}
+.main .aside-right ul.contacts li .img span.time {
+  right: unset;
+  left: -10px;
+}
+.main .aside-right ul.contacts li .img span {
+  right: unset;
+  left: -2px;
+}
+.main .aside-left ul li h4 {
+  margin-left: unset;
+  margin-right: 10px;
+}
+.main .content {
+  margin-left: unset;
+  margin-right: 3.8%;
+}
+.main .content .pre-next .next {
+  right: unset;
+  left: 10px;
+}
+.main .content .pre-next .prev {
+  left: unset;
+  right: 10px;
+}
+.main .content .stories .create-story .user {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main .content .stories .create-story .user p {
+  margin-top: 15px;
+}
+.main .content .stories div.story .prof-float-cont {
+  left: unset;
+  right: 12px;
+}
+.main .content .stories div.story.online .prof-float-cont span {
+  left: unset;
+  right: 23px;
+}
+.main .content .stories div.story p {
+  left: unset;
+  right: 12px;
+}
+.main .content .new-post .head button {
+  margin-left: unset;
+  margin-right: 10px;
+  text-align: right;
+}
+.main .content .new-post .buttons img {
+  margin-right: unset;
+  margin-left: 10px;
+}
+.main .content ul.posts li .head .img img.person {
+  right: unset;
+  left: -5px;
+}
+.main .content ul.posts li .head .text {
+  margin-left: unset;
+  margin-right: 12px;
+}
+.main .content ul.posts li .icons .icon {
+  margin-left: unset;
+  margin-right: 10px;
+}
+.main .content ul.posts li .likes {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.main .content ul.posts li .likes p img {
+  margin-right: unset;
+  margin-left: 5px;
+}
+.main .content ul.posts li .likes button {
+  margin-left: unset;
+  margin-right: 10px;
+}
+.main .content ul.posts li .likes button i {
+  margin-left: unset;
+  margin-right: 5px;
+}
+.main .content ul.posts li .like-bar .reaction i {
+  margin-right: unset;
+  margin-left: 10px;
+}
+.main .content ul.posts li .like-bar .reactions-pop {
+  left: unset;
+  right: 0;
+}
+.main .content ul.posts li .like-bar .reactions-pop span:not(:last-child) {
+  margin-right: unset;
+  margin-left: 11px;
+}
+.main .content ul.posts li .like-bar button i {
+  margin-right: unset;
+  margin-left: 10px;
+}
+.main .content ul.posts li img.animation {
+  margin-right: unset;
+  margin-left: 5px;
+}
+.main .content ul.posts span.online {
+  right: unset;
+  left: -2px;
+}
+
+@media screen and (max-width: 1023px) {
+  .main .content {
+    margin-right: unset;
+  }
+  .main .content ul.posts li .like-bar .reactions-pop span:not(:last-child) {
+    margin-right: unset;
+    margin-left: 5px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .main .content {
+    margin-left: unset;
+    margin-right: -1%;
+  }
+}
+.video-main .aside-left .head .input svg {
+  left: unset;
+  right: 10px;
+}
+.video-main .aside-left ul li .icon {
+  margin-right: unset;
+  margin-left: 10px;
+}
+.video-main .content-container .content .new-videos .prev {
+  left: unset;
+  right: -25px;
+}
+.video-main .content-container .content .new-videos .next {
+  right: unset;
+  left: -25px;
+}
+.video-main .content-container .content .new-videos ul li img {
+  margin-right: unset;
+  margin-left: 10px;
+}
+.video-main .content-container .content .new-videos ul li .text span span.circle {
+  margin-right: unset;
+  margin-left: 7px;
+}
+.video-main .content-container .content ul.videos li .head .profile img {
+  margin-right: unset;
+  margin-left: 10px;
+}
+.video-main .content-container .content ul.videos li .media .play svg {
+  margin-right: -5px;
+}
+.video-main .content-container .content ul.videos li .reactions-count p {
+  margin-left: unset;
+  margin-right: 5px;
+}
+.video-main .content-container .content ul.videos li ul.reactions li i {
+  margin-right: unset;
+  margin-left: 5px;
+}
+.video-main .content-container .content ul.videos li ul.reactions li svg {
+  margin-right: unset;
+  margin-left: 5px;
+}
+.video-main .content-container .content ul.videos li ul.reactions li img {
+  margin-right: unset;
+  margin-left: 5px;
+}
+.video-main .content-container .content ul.videos li .all-reactions {
+  left: unset;
+  right: 15px;
+}
+.video-main .content-container .content ul.videos li .all-reactions img.care {
+  margin: 0 -5px 0 -7px;
+}
+
+.market-main .aside-left .head .input svg {
+  left: unset;
+  right: 10px;
+}
+.market-main .aside-left ul li .icon {
+  margin-right: unset;
+  margin-left: 10px;
+}
+.market-main .content .grid .carousel .prev {
+  left: unset;
+  right: 10px;
+}
+.market-main .content .grid .carousel .next {
+  right: unset;
+  left: 10px;
+}
+.market-main .content .grid .carousel .bullets span {
+  margin-right: unset;
+  margin-left: 5px;
+}
+.market-main .content .grid .carousel .logo {
+  left: unset;
+  right: -10px;
+}
+
+.groups-main .aside-left .head .input svg {
+  left: unset;
+  right: 10px;
+}
+.groups-main .aside-left ul li .icon {
+  margin-right: unset;
+  margin-left: 10px;
+}
+.groups-main .aside-left ul li img {
+  margin-right: unset;
+  margin-left: 10px;
+}
+.groups-main .content-container .content ul.medias li .head .profile img {
+  margin-right: unset;
+  margin-left: 10px;
+}
+.groups-main .content-container .content ul.medias li .reactions-count p {
+  margin-left: unset;
+  margin-right: 5px;
+}
+.groups-main .content-container .content ul.medias li ul.reactions li i {
+  margin-right: unset;
+  margin-left: 5px;
+}
+.groups-main .content-container .content ul.medias li ul.reactions li svg {
+  margin-right: unset;
+  margin-left: 5px;
+}
+.groups-main .content-container .content ul.medias li ul.reactions li img {
+  margin-right: unset;
+  margin-left: 5px;
+}
+.groups-main .content-container .content ul.medias li .all-reactions {
+  left: unset;
+  right: 15px;
+}
+.groups-main .content-container .content ul.medias li .all-reactions img.care {
+  width: 48px;
+  margin: 0 -5px 0 -7px;
+}
+
+.games-main .aside-left .head .input svg {
+  left: unset;
+  right: 10px;
+}
+.games-main .aside-left ul li .icon {
+  margin-right: unset;
+  margin-left: 10px;
+}

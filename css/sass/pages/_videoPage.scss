@@ -1,0 +1,420 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+body {
+  overflow: unset;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  user-select: none;
+}
+
+.video-main {
+  display: flex;
+  background-color: $mainPageBackground;
+  color: white;
+  .aside-left {
+    width: 25%;
+    padding: 10px 15px;
+    background-color: $sidebarBackground;
+    position: sticky;
+    top: 0;
+    @include breakPoints(allMobile) {
+      display: none;
+    }
+    .head {
+      padding: 0 10px;
+      margin-bottom: 20px;
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        h3 {
+          color: white;
+          font-size: 26px;
+        }
+        .icon {
+          @include iconBackground;
+          svg {
+            color: white;
+          }
+        }
+      }
+      .input {
+        position: relative;
+        input {
+          width: 100%;
+          padding: 10px;
+          text-indent: 25px;
+          outline: none;
+          border-radius: 30px;
+          border: none;
+          background-color: $liHoverAInputColor;
+          color: white;
+          &::placeholder {
+            color: $placeholderColor;
+          }
+        }
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+        transition: $trans;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+        &:hover {
+          background-color: $liHoverAInputColor;
+        }
+        .icon {
+          @include iconBackground;
+          transition: $trans;
+          margin-right: 10px;
+          i {
+            filter: invert(80%);
+          }
+        }
+        &.active {
+          background-color: $liHoverAInputColor;
+          .icon {
+            background-color: $iconActive;
+          }
+        }
+      }
+    }
+  }
+  .content-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    padding: 15px 0;
+    .content {
+      width: 70%;
+      margin: 15px 0;
+      @include breakPoints(allMobile) {
+        width: 90%;
+      }
+      .new-videos {
+        background-color: $sidebarBackground;
+        padding: 16px;
+        border-radius: 10px;
+        position: relative;
+        h2 {
+          font-size: 22px;
+          margin-bottom: 10px;
+        }
+        .prev,
+        .next {
+          width: 50px;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          background-color: $liHoverAInputColor;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 60%;
+          transform: translateY(-50%);
+          transition: $trans;
+          cursor: pointer;
+          opacity: 1;
+          &:hover {
+            background-color: $prevNextHover;
+          }
+          &.hidden {
+            visibility: hidden;
+            opacity: 0;
+          }
+          svg {
+            font-size: 25px;
+            color: $colorWhite;
+          }
+        }
+        .prev {
+          left: -25px;
+        }
+        .next {
+          right: -25px;
+        }
+        ul {
+          display: flex;
+          gap: 10px;
+          overflow-x: scroll;
+          scroll-behavior: smooth;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          li {
+            display: flex;
+            align-items: center;
+            width: 370px;
+            flex-shrink: 0;
+            border-radius: 5px;
+            overflow: hidden;
+            cursor: pointer;
+            padding: 10px;
+            transition: $trans;
+            &:hover {
+              background-color: $liHoverAInputColor;
+            }
+            img {
+              width: 50px;
+              aspect-ratio: 1;
+              border-radius: 50%;
+              margin-right: 10px;
+            }
+            .text {
+              p {
+                color: #dbdada;
+                line-height: 1.4;
+                margin-bottom: 5px;
+              }
+              span {
+                font-size: 14px;
+                color: $blueColor;
+                display: flex;
+                align-items: center;
+                span.circle {
+                  width: 10px;
+                  aspect-ratio: 1;
+                  border-radius: 50%;
+                  margin-right: 7px;
+                  background-color: $blueColor;
+                }
+              }
+            }
+          }
+        }
+      }
+      ul.videos {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+
+        li {
+          background-color: $sidebarBackground;
+          border-radius: 10px;
+          position: relative;
+          overflow: hidden;
+
+          .head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+
+            .profile {
+              display: flex;
+              img {
+                width: 50px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                margin-right: 10px;
+              }
+              .text {
+                p {
+                  margin-bottom: 5px;
+                  cursor: pointer;
+                }
+                span {
+                  color: $colorWhite;
+                  font-size: 14px;
+                  cursor: pointer;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+            .icon {
+              @include iconBackground;
+              background-color: transparent;
+              transition: $trans;
+              &:hover {
+                background-color: $iconBackground;
+              }
+            }
+          }
+          .post-text {
+            padding: 0 16px;
+            margin-bottom: 10px;
+            p {
+              color: $colorWhite;
+            }
+          }
+          .media {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            .play {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background-color: rgba(0, 0, 0, 0.127);
+              width: 65px;
+              aspect-ratio: 1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid white;
+              border-radius: 50%;
+              z-index: 1;
+              cursor: pointer;
+              transition: $trans;
+              &.played {
+                visibility: hidden;
+              }
+              svg {
+                font-size: 35px;
+                margin-right: -5px;
+              }
+            }
+            video {
+              width: 100%;
+              height: 100%;
+              cursor: pointer;
+            }
+          }
+          .reactions-count {
+            padding: 0 16px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            visibility: hidden;
+            &.clicked {
+              visibility: visible;
+            }
+            img {
+              width: 20px;
+              cursor: pointer;
+            }
+            p {
+              margin-left: 5px;
+              font-size: 14px;
+              color: $colorWhite;
+              cursor: pointer;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+          ul.reactions {
+            padding: 0 16px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            li {
+              width: calc(100% / 3);
+              padding: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              transition: $trans;
+              &:hover {
+                background-color: $liHoverAInputColor;
+              }
+              i {
+                filter: invert(80%);
+                margin-right: 5px;
+              }
+              svg {
+                margin-right: 5px;
+              }
+              img {
+                margin-right: 5px;
+                width: 28px;
+                aspect-ratio: 1;
+              }
+              span {
+                color: $colorWhite;
+                margin-top: 3px;
+              }
+              &.clicked {
+                img {
+                  animation: rotate 0.5s ease forwards;
+                }
+
+                span {
+                  color: rgb(71, 117, 243);
+                }
+              }
+            }
+          }
+          .all-reactions {
+            position: absolute;
+            bottom: 65px;
+            left: 15px;
+            z-index: 1;
+            background-color: $mainPageBackground;
+            border-radius: 30px;
+            padding: 0 5px;
+            transition: calc($trans - 0.1s);
+            visibility: hidden;
+            opacity: 0;
+            &.hovered {
+              opacity: 1;
+              visibility: visible;
+            }
+            img {
+              width: 35px;
+              cursor: pointer;
+              transition: $trans;
+              position: relative;
+              bottom: 0;
+              &.care {
+                width: 48px;
+                margin: 0 -7px 0 -5px;
+                margin-bottom: -6px;
+              }
+              &:hover {
+                scale: 1.5;
+                bottom: 5px;
+                z-index: 1;
+              }
+              @include breakPoints(allMobile) {
+                width: 25px;
+                &.care {
+                  width: 35px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include keyF(rotate) {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-20deg);
+    scale: 1.4;
+  }
+  100% {
+    transform: rotate(0);
+    scale: 1;
+  }
+}

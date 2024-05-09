@@ -1,0 +1,369 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+body {
+  overflow: unset;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  user-select: none;
+}
+
+.groups-main {
+  display: flex;
+  background-color: $mainPageBackground;
+  color: white;
+  .aside-left {
+    width: 25%;
+    padding: 10px 15px;
+    background-color: $sidebarBackground;
+    position: sticky;
+    top: 0;
+    @include breakPoints(allMobile) {
+      display: none;
+    }
+    .head {
+      padding: 0 10px;
+      margin-bottom: 20px;
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        h3 {
+          color: white;
+          font-size: 26px;
+        }
+        .icon {
+          @include iconBackground;
+          svg {
+            color: white;
+          }
+        }
+      }
+      .input {
+        position: relative;
+        input {
+          width: 100%;
+          padding: 10px;
+          text-indent: 25px;
+          outline: none;
+          border-radius: 30px;
+          border: none;
+          background-color: $liHoverAInputColor;
+          color: white;
+          &::placeholder {
+            color: $placeholderColor;
+          }
+        }
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    ul {
+      hr {
+        margin: 15px 0 10px;
+        border: 1px solid #3e4042;
+      }
+      .head-2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 0;
+        h3 {
+          color: $colorWhite;
+          font-size: 18px;
+        }
+        button {
+          padding: 8px 5px;
+          font-size: 14px;
+          border: none;
+          color: $iconActive;
+          cursor: pointer;
+          border-radius: 3px;
+          background-color: transparent;
+          transition: $trans;
+          &:hover {
+            background-color: $iconBackground;
+          }
+        }
+      }
+      li {
+        display: flex;
+        align-items: center;
+        transition: $trans;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+        &:hover {
+          background-color: $liHoverAInputColor;
+        }
+        .icon {
+          @include iconBackground;
+          transition: $trans;
+          margin-right: 10px;
+          i {
+            filter: invert(80%);
+          }
+        }
+        p {
+          flex: 1;
+        }
+        svg {
+          color: $colorWhite;
+        }
+        &.active {
+          background-color: $liHoverAInputColor;
+          .icon {
+            background-color: $iconActive;
+          }
+        }
+        &.Btn {
+          justify-content: center;
+          background-color: #233950;
+          color: $colorWhite;
+          transition: $trans;
+          &:hover {
+            color: white;
+            background-color: #2d4d6f;
+          }
+        }
+        img {
+          width: 50px;
+          aspect-ratio: 1;
+          border-radius: 8px;
+          margin-right: 10px;
+        }
+        .text {
+          p {
+            font-size: 15px;
+          }
+          span {
+            font-size: 12px;
+            color: $colorWhite;
+          }
+        }
+      }
+    }
+  }
+  .content-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    padding: 15px 0;
+    .content {
+      width: 70%;
+      margin: 15px 0;
+      @include breakPoints(allMobile) {
+        width: 90%;
+      }
+      .head {
+        h4 {
+          color: $colorWhite;
+        }
+      }
+      ul.medias {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+
+        li {
+          background-color: $sidebarBackground;
+          border-radius: 10px;
+          position: relative;
+          overflow: hidden;
+
+          .head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+
+            .profile {
+              display: flex;
+              img {
+                width: 50px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                margin-right: 10px;
+              }
+              .text {
+                p {
+                  margin-bottom: 5px;
+                  cursor: pointer;
+                }
+                span {
+                  color: $colorWhite;
+                  font-size: 14px;
+                  cursor: pointer;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+            .icon {
+              @include iconBackground;
+              background-color: transparent;
+              transition: $trans;
+              &:hover {
+                background-color: $iconBackground;
+              }
+            }
+          }
+          .post-text {
+            padding: 0 16px;
+            margin-bottom: 10px;
+            text-align: right;
+            direction: rtl;
+            p {
+              color: $colorWhite;
+            }
+          }
+          .media {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            img {
+              width: 100%;
+              height: 100%;
+              cursor: pointer;
+            }
+          }
+          .reactions-count {
+            padding: 0 16px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            visibility: hidden;
+            &.clicked {
+              visibility: visible;
+            }
+            img {
+              width: 20px;
+              cursor: pointer;
+            }
+            p {
+              margin-left: 5px;
+              font-size: 14px;
+              color: $colorWhite;
+              cursor: pointer;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+          ul.reactions {
+            padding: 0 16px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            li {
+              width: calc(100% / 3);
+              padding: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              transition: $trans;
+              &:hover {
+                background-color: $liHoverAInputColor;
+              }
+              i {
+                filter: invert(80%);
+                margin-right: 5px;
+              }
+              svg {
+                margin-right: 5px;
+              }
+              img {
+                margin-right: 5px;
+                width: 28px;
+                aspect-ratio: 1;
+              }
+              span {
+                color: $colorWhite;
+                margin-top: 3px;
+              }
+              &.clicked {
+                img {
+                  animation: rotate 0.5s ease forwards;
+                }
+
+                span {
+                  color: rgb(71, 117, 243);
+                }
+              }
+            }
+          }
+          .all-reactions {
+            position: absolute;
+            bottom: 65px;
+            left: 15px;
+            z-index: 1;
+            background-color: $mainPageBackground;
+            border-radius: 30px;
+            padding: 0 5px;
+            transition: calc($trans - 0.1s);
+            visibility: hidden;
+            opacity: 0;
+            &.hovered {
+              opacity: 1;
+              visibility: visible;
+            }
+            img {
+              width: 35px;
+              cursor: pointer;
+              transition: $trans;
+              position: relative;
+              bottom: 0;
+              &.care {
+                width: 48px;
+                margin: 0 -7px 0 -5px;
+                margin-bottom: -6px;
+              }
+              &:hover {
+                scale: 1.5;
+                bottom: 5px;
+                z-index: 1;
+              }
+              @include breakPoints(allMobile) {
+                width: 25px;
+                &.care {
+                  width: 35px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include keyF(rotate) {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-20deg);
+    scale: 1.4;
+  }
+  100% {
+    transform: rotate(0);
+    scale: 1;
+  }
+}

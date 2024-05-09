@@ -1,0 +1,242 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+body {
+  overflow: unset;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  user-select: none;
+}
+
+.market-main {
+  display: flex;
+  background-color: $mainPageBackground;
+  color: white;
+  min-height: 100vh;
+  .aside-left {
+    width: 25%;
+    padding: 10px 15px;
+    background-color: $sidebarBackground;
+    position: sticky;
+    top: 0;
+    @include breakPoints(allMobile) {
+      display: none;
+    }
+    .head {
+      padding: 0 10px;
+      margin-bottom: 20px;
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        h3 {
+          color: white;
+          font-size: 26px;
+        }
+        .icon {
+          @include iconBackground;
+          svg {
+            color: white;
+          }
+        }
+      }
+      .input {
+        position: relative;
+        input {
+          width: 100%;
+          padding: 10px;
+          text-indent: 25px;
+          outline: none;
+          border-radius: 30px;
+          border: none;
+          background-color: $liHoverAInputColor;
+          color: white;
+          &::placeholder {
+            color: $placeholderColor;
+          }
+        }
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+        transition: $trans;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+        &:hover {
+          background-color: $liHoverAInputColor;
+        }
+        .icon {
+          @include iconBackground;
+          transition: $trans;
+          margin-right: 10px;
+          i {
+            filter: invert(80%);
+          }
+        }
+        p {
+          flex: 1;
+        }
+        svg {
+          color: $colorWhite;
+        }
+        &.active {
+          background-color: $liHoverAInputColor;
+          .icon {
+            background-color: $iconActive;
+          }
+        }
+        &:last-child {
+          justify-content: center;
+          background-color: #233950;
+          color: $colorWhite;
+          transition: $trans;
+          &:hover {
+            color: white;
+            background-color: #2d4d6f;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    flex: 1;
+    padding: 15px 30px;
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      h2 {
+        font-size: 22.5px;
+      }
+      p {
+        color: $blueColor;
+        cursor: pointer;
+      }
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      column-gap: 20px;
+      row-gap: 50px;
+      .card {
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 200px;
+          border-radius: 10px;
+        }
+        .text {
+          p {
+            margin: 10px 0;
+          }
+          span {
+            color: $colorWhite;
+            font-size: 13px;
+          }
+        }
+      }
+      .carousel {
+        position: relative;
+        .image {
+          position: relative;
+          img {
+            filter: brightness(70%);
+            display: none;
+            transition: $trans;
+            &.active {
+              display: block;
+            }
+          }
+        }
+        &:hover {
+          .icon {
+            visibility: visible;
+          }
+          .image {
+            img {
+              filter: brightness(90%);
+            }
+          }
+        }
+        .icon {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          @include iconBackground;
+          svg {
+            font-size: 20px;
+            color: $colorWhite;
+          }
+          visibility: hidden;
+          &.hidden {
+            visibility: hidden;
+          }
+          &:hover {
+            background-color: $prevNextHover;
+          }
+        }
+        .prev {
+          left: 10px;
+        }
+        .next {
+          right: 10px;
+        }
+        .bullets {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+
+          span {
+            width: 8px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: white;
+            margin-right: 5px;
+            opacity: 0.6;
+            &.active {
+              opacity: 1;
+            }
+          }
+        }
+        .logo {
+          position: absolute;
+          left: -10px;
+          top: -10px;
+          width: 50px;
+          padding: 5px;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          background-color: white;
+          border: 3px solid black;
+          img {
+            object-fit: contain;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

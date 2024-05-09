@@ -1,0 +1,25 @@
+@use "../helpers/mixins" as *;
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+  @include breakPoints(extraSmall) {
+    max-width: 540px;
+  }
+  @include breakPoints(small) {
+    max-width: 720px;
+  }
+  @include breakPoints(medium) {
+    max-width: 720px;
+  }
+  @include breakPoints(large) {
+    max-width: 960px;
+  }
+  @include breakPoints(extraLarge) {
+    max-width: 1140px;
+  }
+  @include breakPoints(extraExtraLarge) {
+    max-width: 1140px;
+  }
+}

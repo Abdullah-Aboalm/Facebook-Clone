@@ -1,0 +1,621 @@
+.nav {
+  .input-logo,
+  ul.profile {
+    .input {
+      svg {
+        right: 15px;
+        left: unset;
+      }
+    }
+  }
+  .input-logo {
+    .arrow {
+      margin-left: 10px;
+      margin-right: unset;
+    }
+    svg.fa-facebook {
+      margin-left: 10px;
+      margin-right: unset;
+    }
+  }
+  ul.profile {
+    li.main {
+      &:not(:last-child) {
+        margin-left: 15px;
+        margin-right: unset;
+      }
+    }
+    .notif-popup,
+    .messenger-popup,
+    .menu-popup,
+    .profile-popup {
+      ul {
+        .text {
+          margin-right: 10px;
+          margin-left: unset;
+        }
+      }
+    }
+  }
+  .notif-popup,
+  .messenger-popup {
+    .buttons {
+      button {
+        margin-left: 10px;
+        margin-right: unset;
+      }
+    }
+    ul {
+      .img {
+        margin-left: 5px;
+        margin-right: unset;
+      }
+      span {
+        &.circle {
+          margin-right: 10px;
+          margin-left: unset;
+        }
+      }
+    }
+  }
+  .messenger-popup {
+    .head {
+      .icon {
+        margin-right: 10px;
+        margin-left: unset;
+      }
+    }
+  }
+  .notif-popup {
+    ul.noti {
+      span {
+        margin-right: 10px;
+        margin-left: unset;
+      }
+    }
+    .img {
+      img.i {
+        left: -5px;
+        right: unset;
+      }
+      i {
+        left: -5px;
+        right: unset;
+      }
+    }
+  }
+  .menu-popup {
+    .create {
+      ul {
+        li {
+          justify-content: flex-start;
+          .icon {
+            margin-right: unset;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+  .profile-popup {
+    ul:first-of-type {
+      li {
+        img {
+          margin-right: unset;
+          margin-left: 10px;
+        }
+      }
+    }
+    .icon {
+      margin-right: unset;
+      margin-left: 10px;
+    }
+  }
+  .search-pop {
+    left: unset;
+    right: 0;
+    ul.ul-search {
+      width: 100%;
+      li {
+        .text {
+          margin-left: unset;
+          margin-right: 10px;
+          span {
+            margin-right: unset;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav ul.profile .profile-popup .icon {
+  margin-left: 10px;
+}
+
+.nav ul.profile .messenger-popup ul.persons li .text p {
+  color: gray;
+  margin-top: 8px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.nav ul.profile .messenger-popup ul.persons li .text.new p {
+  color: #3878de;
+}
+
+.main {
+  .float {
+    left: 20px;
+    left: unset;
+  }
+  .notification-float {
+    left: unset;
+    right: 20px;
+    ul {
+      li {
+        .text {
+          margin-left: unset;
+          margin-right: 10px;
+        }
+        span {
+          margin-left: unset;
+          margin-right: 10px;
+        }
+      }
+    }
+    .img {
+      margin-right: unset;
+      margin-left: 5px;
+      i {
+        right: unset;
+        left: -5px;
+      }
+    }
+  }
+  .aside-right {
+    ul.birthdays {
+      li {
+        i {
+          margin-right: unset;
+          margin-left: 10px;
+        }
+      }
+    }
+    .contacts-head {
+      svg {
+        margin-left: unset;
+        margin-right: 5px;
+      }
+    }
+    ul.contacts {
+      li {
+        .img {
+          margin-right: unset;
+          margin-left: 13px;
+          span.time {
+            right: unset;
+            left: -10px;
+          }
+          span {
+            right: unset;
+            left: -2px;
+          }
+        }
+      }
+    }
+  }
+  .aside-left {
+    ul {
+      li {
+        h4 {
+          margin-left: unset;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .content {
+    margin-left: unset;
+    margin-right: 3.8%;
+    .pre-next {
+      .next {
+        right: unset;
+        left: 10px;
+      }
+      .prev {
+        left: unset;
+        right: 10px;
+      }
+    }
+    .stories {
+      .create-story {
+        .user {
+          align-items: center;
+          p {
+            margin-top: 15px;
+          }
+        }
+      }
+      div.story {
+        .prof-float-cont {
+          left: unset;
+          right: 12px;
+        }
+        &.online {
+          .prof-float-cont {
+            span {
+              left: unset;
+              right: 23px;
+            }
+          }
+        }
+        p {
+          left: unset;
+          right: 12px;
+        }
+      }
+    }
+    .new-post {
+      .head {
+        button {
+          margin-left: unset;
+          margin-right: 10px;
+          text-align: right;
+        }
+      }
+      .buttons {
+        img {
+          margin-right: unset;
+          margin-left: 10px;
+        }
+      }
+    }
+    ul.posts {
+      li {
+        .head {
+          .img {
+            img.person {
+              right: unset;
+              left: -5px;
+            }
+          }
+          .text {
+            margin-left: unset;
+            margin-right: 12px;
+          }
+        }
+        .icons {
+          .icon {
+            margin-left: unset;
+            margin-right: 10px;
+          }
+        }
+        .likes {
+          justify-content: flex-start;
+          p {
+            img {
+              margin-right: unset;
+              margin-left: 5px;
+            }
+          }
+          button {
+            margin-left: unset;
+            margin-right: 10px;
+            i {
+              margin-left: unset;
+              margin-right: 5px;
+            }
+          }
+        }
+        .like-bar {
+          .reaction {
+            i {
+              margin-right: unset;
+              margin-left: 10px;
+            }
+          }
+          .reactions-pop {
+            left: unset;
+            right: 0;
+            span {
+              &:not(:last-child) {
+                margin-right: unset;
+                margin-left: 11px;
+              }
+            }
+          }
+          button {
+            i {
+              margin-right: unset;
+              margin-left: 10px;
+            }
+          }
+        }
+        img.animation {
+          margin-right: unset;
+          margin-left: 5px;
+        }
+      }
+      span {
+        &.online {
+          right: unset;
+          left: -2px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .main {
+    .content {
+      margin-right: unset;
+      ul.posts {
+        li {
+          .like-bar {
+            .reactions-pop {
+              span {
+                &:not(:last-child) {
+                  margin-right: unset;
+                  margin-left: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .main {
+    .content {
+      margin-left: unset;
+      margin-right: -1%;
+    }
+  }
+}
+
+.video-main {
+  .aside-left {
+    .head {
+      .input {
+        svg {
+          left: unset;
+          right: 10px;
+        }
+      }
+    }
+    ul {
+      li {
+        .icon {
+          margin-right: unset;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .content-container {
+    .content {
+      .new-videos {
+        .prev {
+          left: unset;
+          right: -25px;
+        }
+        .next {
+          right: unset;
+          left: -25px;
+        }
+        ul {
+          li {
+            img {
+              margin-right: unset;
+              margin-left: 10px;
+            }
+            .text {
+              span {
+                span.circle {
+                  margin-right: unset;
+                  margin-left: 7px;
+                }
+              }
+            }
+          }
+        }
+      }
+      ul.videos {
+        li {
+          .head {
+            .profile {
+              img {
+                margin-right: unset;
+                margin-left: 10px;
+              }
+            }
+          }
+          .media {
+            .play {
+              svg {
+                margin-right: -5px;
+              }
+            }
+          }
+          .reactions-count {
+            p {
+              margin-left: unset;
+              margin-right: 5px;
+            }
+          }
+          ul.reactions {
+            li {
+              i {
+                margin-right: unset;
+                margin-left: 5px;
+              }
+              svg {
+                margin-right: unset;
+                margin-left: 5px;
+              }
+              img {
+                margin-right: unset;
+                margin-left: 5px;
+              }
+            }
+          }
+          .all-reactions {
+            left: unset;
+            right: 15px;
+            img {
+              &.care {
+                margin: 0 -5px 0 -7px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.market-main {
+  .aside-left {
+    .head {
+      .input {
+        svg {
+          left: unset;
+          right: 10px;
+        }
+      }
+    }
+    ul {
+      li {
+        .icon {
+          margin-right: unset;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .content {
+    .grid {
+      .carousel {
+        .prev {
+          left: unset;
+          right: 10px;
+        }
+        .next {
+          right: unset;
+          left: 10px;
+        }
+        .bullets {
+          span {
+            margin-right: unset;
+            margin-left: 5px;
+          }
+        }
+        .logo {
+          left: unset;
+          right: -10px;
+        }
+      }
+    }
+  }
+}
+
+.groups-main {
+  .aside-left {
+    .head {
+      .input {
+        svg {
+          left: unset;
+          right: 10px;
+        }
+      }
+    }
+    ul {
+      li {
+        .icon {
+          margin-right: unset;
+          margin-left: 10px;
+        }
+        img {
+          margin-right: unset;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .content-container {
+    .content {
+      ul.medias {
+        li {
+          .head {
+            .profile {
+              img {
+                margin-right: unset;
+                margin-left: 10px;
+              }
+            }
+          }
+          .reactions-count {
+            p {
+              margin-left: unset;
+              margin-right: 5px;
+            }
+          }
+          ul.reactions {
+            li {
+              i {
+                margin-right: unset;
+                margin-left: 5px;
+              }
+              svg {
+                margin-right: unset;
+                margin-left: 5px;
+              }
+              img {
+                margin-right: unset;
+                margin-left: 5px;
+              }
+            }
+          }
+          .all-reactions {
+            left: unset;
+            right: 15px;
+            img {
+              &.care {
+                width: 48px;
+                margin: 0 -5px 0 -7px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.games-main {
+  .aside-left {
+    .head {
+      .input {
+        svg {
+          left: unset;
+          right: 10px;
+        }
+      }
+    }
+    ul {
+      li {
+        .icon {
+          margin-right: unset;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

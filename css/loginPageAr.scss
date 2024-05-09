@@ -1,0 +1,32 @@
+@use "./sass/helpers/mixins" as *;
+@use "./sass/helpers/variables" as *;
+@use "./sass/helpers/globalRules" as *;
+
+.container {
+  .form-cont {
+    .form {
+      input {
+        direction: ltr;
+        text-align: right;
+      }
+      a {
+        direction: rtl;
+      }
+    }
+  }
+  .text {
+    text-align: right;
+  }
+}
+
+.footer {
+  ul {
+    direction: rtl;
+    li {
+      margin-right: 20px;
+    }
+  }
+  p.copyright {
+    direction: rtl;
+  }
+}
